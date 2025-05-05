@@ -4,10 +4,10 @@ pipeline {
     stage('Checkout') {
       steps {
         checkout([$class: 'GitSCM',
-          branches: [[name: '*/main']], // Ganti 'main' jika branch kamu 'master'
+          branches: [[name: '*/main']], 
           userRemoteConfigs: [[
             url: 'https://github.com/alfikriangelo/tugas-vuln-devsecop.git',
-            credentialsId: 'github-token' // <- pastikan ID ini sesuai dengan yang di Jenkins
+            credentialsId: 'github-token' 
           ]]
         ])
       }
